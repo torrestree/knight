@@ -20,7 +20,6 @@
                                         <field name="teacher_id"/>
                                     </tree>
                                 </field>
-                                <field name="description" class="oe_inline" placeholder="请填写备注信息..."/>
                             </page>
                        </notebook>
                     </sheet>
