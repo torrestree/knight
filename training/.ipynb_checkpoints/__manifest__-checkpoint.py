@@ -7,8 +7,7 @@
     'category': 'Tools',
     'depends': ['base'],
     'data': [
-        'security/ir.model.access.csv',        
-        'views/lesson_view.xml',
+        'security/ir.model.access.csv',
         'views/subject_view.xml',
         'views/home_view.xml',
     ],
