@@ -11,46 +11,14 @@
                 </graph>
             </field>
         </record>
-        
-        <record id="view_lesson_form" model="ir.ui.view">
-            <field name="name">training.lesson.form</field>
-            <field name="model">training.lesson</field>
-            <field name="arch" type="xml">
-                <form string="课程">
-                    <header>
-                        <button name="action_confirm" type="object" string="确认"  states="draft" class="btn-primary" />
-                        <field name="state" widget="statusbar"/>
-                    </header>
-                    <sheet>
-                        <div class="oe_title">
-                            <h1>
-                                <field name="name" attrs="{'readonly': [('state', '=', 'confirm')]}" />
-                            </h1>
-                        </div>
-                        <group>
-                            <group>
-                                <field name="subject_id" attrs="{'readonly': [('state', '=', 'confirm')]}"/>
-                                <field name="teacher_id" attrs="{'readonly': [('state', '=', 'confirm')]}"/>
-                                <field name="person_id" attrs="{'readonly': [('state', '=', 'confirm')]}"/>
-                                <field name="qty_seat"/>
-                            </group>
-                            <group>
-                                <field name="startdate" attrs="{'readonly': [('state', '=', 'confirm')]}"/>
-                                <field name="enddate" attrs="{'readonly': [('state', '=', 'confirm')]}"/>
-                            </group>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
 
         <record id="action_lesson" model="ir.actions.act_window">
             <field name="name">课程</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">training.lesson</field>
-            <field name="view_type">form</field>
-            <field name="view_id" ref="view_lesson_form"/>
-            <field name="view_mode">graph,form</field>
+            <field name="view_type">graph</field>
+            <field name="view_id" ref="view_lesson_graph"/>
+            <field name="view_mode">graph</field>
         </record>
     </data>
 </odoo>
